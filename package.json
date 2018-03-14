@@ -1,0 +1,27 @@
+{
+  "name": "codingame-typescript",
+  "description": "Solve codingame games with TypeScript",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "test": "TS_NODE_DISABLE_WARNINGS=true mocha --opts mocha.opts"
+  },
+  "author": "jbnimble",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/jbnimble/codingame-typescript.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "awesome-typescript-loader": "^4.0.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
