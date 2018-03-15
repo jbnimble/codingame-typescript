@@ -5,7 +5,8 @@ const join = require('path').join
 // [name] is replaced by the key in the entry object
 module.exports = {
   entry: {
-    'power-of-thor-episode-1': join(__dirname, 'src/main', 'power-of-thor-episode-1.ts')
+    'power-of-thor-episode-1': join(__dirname, 'src/main', 'power-of-thor-episode-1.ts'),
+    'chuck-norris': join(__dirname, 'src/main', 'chuck-norris.ts')
   },
   output: {
     filename: '[name].js', path: join(__dirname, 'out')
