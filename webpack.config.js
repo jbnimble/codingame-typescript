@@ -6,7 +6,8 @@ const join = require('path').join
 module.exports = {
   entry: {
     'power-of-thor-episode-1': join(__dirname, 'src/main', 'power-of-thor-episode-1.ts'),
-    'chuck-norris': join(__dirname, 'src/main', 'chuck-norris.ts')
+    'chuck-norris': join(__dirname, 'src/main', 'chuck-norris.ts'),
+    'mars-lander-2': join(__dirname, 'src/main', 'mars-lander-episode-2.ts')
   },
   output: {
     filename: '[name].js', path: join(__dirname, 'out')

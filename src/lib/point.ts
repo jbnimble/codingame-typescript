@@ -4,7 +4,7 @@
 export class Point {
   constructor(public x:number = 0, public y:number = 0) {}
   /**
-   * Distance formula between two points
+   * Distance/Magnitude formula between two points
    * @param p
    */
   distance(p:Point):number {
@@ -52,6 +52,14 @@ export class Point {
       xIncrement = -increment;
     }
     return new Point(this.x + xIncrement, this.y + yIncrement);
+  }
+
+  public magnitude():number {
+    return Math.sqrt(Math.pow(this.x,2) + Math.pow(this.y,2));
+  }
+
+  public angleDegrees():number {
+    return Math.atan2(this.y, this.x) * 180 / Math.PI;
   }
 
   /**
