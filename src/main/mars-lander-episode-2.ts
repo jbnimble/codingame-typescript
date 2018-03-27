@@ -48,6 +48,11 @@ export class CodingameApp {
     printErr('C elapsed='+elapsed() + ' dateNow='+dateNow());
     //sleep(1000);
     printErr('after sleep');
+    // TODO build astar Graph from surface points
+    // see https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
+    // make graph points X units squared (100? 50?)
+    // TODO search Graph to find best path
+
     // TODO calculate middle of landing area
     // TODO calculate horizontal and vertical to middle of landing area
     // TODO calculate h/v between highest obstacle to middle of landing area
