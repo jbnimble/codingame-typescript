@@ -26,10 +26,11 @@ export class CodingameApp {
   // thrust 0 to 4, creates force of X m/s^2 and uses X liters of fuel
   // surface points connect to make lines, flat spot should be at least 1000 wide
   public run() {
-    printErr('A elapsed='+elapsed() + ' dateNow='+dateNow());
+//    printErr('A elapsed='+elapsed() + ' dateNow='+dateNow());
 //    timeout(0.1,function() {printErr('###### test ##### '+dateNow())});
 //    sleep(1);
-    printErr('B elapsed='+elapsed() + ' dateNow='+dateNow());
+//    printErr('B elapsed='+elapsed() + ' dateNow='+dateNow());
+
     let surfaceN:number = parseInt(readline());
     for (let i:number = 0; i < surfaceN; i++) {
       let inputs:string[] = readline().split(' ');
@@ -45,9 +46,23 @@ export class CodingameApp {
       this.surface.push(next);
       printErr(i+' elapsed='+elapsed() + ' dateNow='+dateNow());
     }
-    printErr('C elapsed='+elapsed() + ' dateNow='+dateNow());
+    /*
+      IDEA: path finding via flight corridors using cardinal directions
+      with surface data work backwards creating flight corridors from landing site to ceiling
+      once the position of the lander is known, find corridors that meet
+
+      finding corridors requires finding line intersections and deciding which direction to head next
+
+      find corridor from landing zone to ceiling
+        headings => N, NE, NW
+        loop until done
+          if heading N and reach ceiling
+            then done, record corridor
+          if not heading N and reach obstacle
+    */
+//    printErr('C elapsed='+elapsed() + ' dateNow='+dateNow());
     //sleep(1000);
-    printErr('after sleep');
+//    printErr('after sleep');
     // TODO build astar Graph from surface points
     // see https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
     // make graph points X units squared (100? 50?)

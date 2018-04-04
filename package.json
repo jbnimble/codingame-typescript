@@ -3,7 +3,8 @@
   "description": "Solve codingame games with TypeScript",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "TS_NODE_DISABLE_WARNINGS=true mocha --opts mocha.opts"
   },
   "author": "jbnimble",
