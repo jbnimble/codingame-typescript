@@ -1,4 +1,4 @@
-import {Point} from '../lib/point';
+import {Point,KeyPoint} from '../lib/point';
 
 describe('Test Point class', function () {
   it('cardinalDirection should be a function', function () {
@@ -62,5 +62,16 @@ describe('Test Point class', function () {
   it('cardinal increment test NW', function () {
     new Point(0,0).cardinalIncrement('NW',1).x.should.equal(-1, 'x portion');
     new Point(0,0).cardinalIncrement('NW',1).y.should.equal(1, 'y portion');
+  })
+  it('closest to point', function () {
+    let keyPoints:KeyPoint[] = [];
+    for (let i=1; i<10; i++) {
+      keyPoints.push(new KeyPoint(i,new Point(i,i)));
+    }
+    let result:KeyPoint[] = KeyPoint.sortByClosest(keyPoints,new Point(0,0))
+    result[0].key.should.equal(1,'should be 1 was ' + result);
+    result[1].key.should.equal(2,'should be 2 was ' + result);
+    result[2].key.should.equal(3,'should be 3 was ' + result);
+    result[3].key.should.equal(4,'should be 4 was ' + result);
   })
 })

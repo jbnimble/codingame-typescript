@@ -69,3 +69,19 @@ export class Point {
     return `Point (${this.x},${this.y})`;
   }
 }
+
+export class KeyPoint {
+  constructor(
+    public key:any,
+    public point:Point) {}
+
+  /**
+   * sort KeyPoint array by closest to toPoint
+   */
+  public static sortByClosest(keyPoints:KeyPoint[], toPoint:Point): KeyPoint[] {
+    let sortedKeyPoints:KeyPoint[] = keyPoints.sort((a,b) => {
+      return a.point.distance(toPoint) - b.point.distance(toPoint);
+    });
+    return sortedKeyPoints;
+  }
+}
